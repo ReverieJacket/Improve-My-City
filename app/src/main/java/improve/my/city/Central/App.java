@@ -44,7 +44,6 @@ public class App {
                 catch (InputMismatchException x){
                     System.out.println("Input inválido! Por favor, insira só números. ");
                 } catch( OutOfTheOptionsException e){
-                    System.out.println(e);
                 }
                 
             if(choice == 2){
@@ -57,13 +56,12 @@ public class App {
                     try {
                         createCitizenAccount(input, citizens);
                     } catch (CannotCreateAccountException e) {   
-                        System.out.println(e);
+
                     }
                 }else{
                     try {
                         createEmployeeAccount(input, employees);
                     } catch (CannotCreateAccountException z) {
-                        System.out.println(z);
                     }
                 }
             }
@@ -101,7 +99,7 @@ public class App {
                                     System.out.println("Não foi possível fazer login! Identificação ou senha inválidos.\n");
                                 }
                             } catch (CannotFindUserException e) {
-                                System.out.println(e);
+
                                 return;
                             }
                             break;
@@ -120,7 +118,6 @@ public class App {
                                     System.out.println("Não foi possível fazer login! Identificação ou senha inválidos. \n");
                                 }
                             } catch (CannotFindUserException e) {
-                                System.out.println(e);
                                 return;
                             }
                             break;
@@ -128,7 +125,6 @@ public class App {
                             throw new OutOfTheOptionsException();
                             }
                         }catch(OutOfTheOptionsException x){
-                            System.out.println(x);
                             return;
                         }catch(InputMismatchException y){
                             System.out.println("Input inválido! Por favor, insira o tipo de dado equivalente:");
@@ -251,7 +247,7 @@ public class App {
             throw new OutOfTheOptionsException();      
         }
         }catch(OutOfTheOptionsException p){
-            System.out.println(p);
+
             return;
         }
         citizens.addUser(citizen);
@@ -284,7 +280,7 @@ public class App {
             throw new CannotCreateAccountException();
         }
         }catch( CannotCreateAccountException h){
-            System.out.println(h);
+
             return;
         }
          if(employees.searchUser(id) == false){
@@ -345,7 +341,6 @@ public class App {
                     throw new OutOfTheOptionsException();
             }
             }catch (OutOfTheOptionsException w){
-                System.out.println(w);
                 return;
             }
             employees.addEmployee(employee);
@@ -377,16 +372,16 @@ public class App {
                     try {
                         feed(report, citizen, input);
                     } catch (EmptyArrayException v) {
-                        System.out.println(v);
+
                     }catch (CannotFindReportException c){
-                        System.out.println(c);
+
                     }
                     break;
                 case 2:
                     try {
                     atividade(citizen, report);
                     } catch (CannotFindReportException e) {
-                        System.out.println(e);
+
                     }
                     break;
                 case 3:
@@ -403,7 +398,7 @@ public class App {
             }
         }
         catch(OutOfTheOptionsException o){
-            System.out.println(o);
+
         }
         }while(choice != true);
 
@@ -429,16 +424,16 @@ public class App {
                     try {
                         feedEmployee(reports, employee, input);
                     } catch (EmptyArrayException q) {
-                        System.out.println(q);
+
                     } catch (CannotFindReportException l) {
-                        System.out.println(l);
+
                     }
                     break;
                 case 2:
                     try {
                         archivedProcesses(reports, input);
                     } catch (EmptyArrayException e1) {
-                        System.out.println(e1);
+
                     }
                     break;
                 case 3:
@@ -446,10 +441,10 @@ public class App {
                         try {
                             openedProcesses(reports, input);
                         } catch (EmptyArrayException g) {
-                            System.out.println(g);
+
                         }
                     } catch (CannotFindReportException e) {
-                        System.out.println(e);
+
                     }
                     break;
                 case 4:
@@ -460,7 +455,7 @@ public class App {
                 
             }
         }catch (OutOfTheOptionsException b){
-            System.out.println(b);
+
         }
         }while(option != 4);
     }
@@ -481,7 +476,7 @@ public class App {
             System.out.println("\n");
         }
         }catch( EmptyArrayException j){
-            System.out.println(j);
+
             return;
         }
         do{
@@ -498,7 +493,7 @@ public class App {
             } catch(InputMismatchException f){
                 System.out.println("\n Input inválido! Por favor, insira um número.\n");
             } catch (OutOfTheOptionsException p){
-                System.out.println(p);
+
             }
             try{
             if(option == 1){
@@ -518,7 +513,7 @@ public class App {
             } catch(InputMismatchException l){
                 System.out.println("Input inválido! Por favor, insira um Id composto por letras, números e símbolos.");
             } catch(CannotFindReportException c){
-                System.out.println(c);
+
             }
         }while(option == 1);
     }
@@ -555,7 +550,7 @@ public class App {
                 throw new OutOfTheOptionsException();
             }
             }catch (OutOfTheOptionsException o){
-                System.out.println(o);
+
             }
             
             if(option == 1){
@@ -590,7 +585,7 @@ public class App {
             }
         }
         }catch(EmptyArrayException j){
-            System.out.println(j);
+
             return;
         }
         do{
@@ -645,9 +640,9 @@ public class App {
                 System.out.println("Id -> Letras, números e símbolos.");
                 System.out.println("Opção -> Apenas números.");
             }catch (OutOfTheOptionsException t){
-                System.out.println(t);
+
             }catch (CannotFindReportException c){
-                System.out.println(c);
+
             }
         
         }while(choice != 3);
@@ -799,7 +794,7 @@ public class App {
             } catch (InputMismatchException k){
                 System.out.println("Input inválido! Por favor, insira um número.");
             } catch (OutOfTheOptionsException j){
-                System.out.println(j);
+
             }
             try{
             switch(choice){
@@ -880,11 +875,11 @@ public class App {
             System.out.println("Id -> Letras, números e símbolos.");
             System.out.println("Opção -> Apenas números.");
         }catch (OutOfTheOptionsException s){
-            System.out.println(s);
+
         }catch (EmptyArrayException a){
-            System.out.println(a);
+
         }catch (CannotFindReportException c){
-            System.out.println(c);
+
         }
     }while(choice != 4);
     }
@@ -959,7 +954,7 @@ public class App {
                 System.out.println("Opção -> Apenas números.");
                 System.out.println("Descrição -> Letras e números.");
             }catch(OutOfTheOptionsException x){
-                System.out.println(x);
+
             }
             local(input, report);
             try{
@@ -983,7 +978,7 @@ public class App {
                     System.out.println("Opção -> Apenas números.");
                     System.out.println("Data -> Números e /.");
                 }catch(OutOfTheOptionsException b){
-                    System.out.println(b);
+
                 }
                 if(option == 1){
                     report.setUser(null);
@@ -1009,7 +1004,7 @@ public class App {
                 }catch (InputMismatchException l){
                     System.out.println("Input inválido! Por favor, insira um número dentre os listados.");
                 }catch(OutOfTheOptionsException b){
-                    System.out.println(b);
+
                 }
         }while(option == 1);
         
@@ -1051,7 +1046,7 @@ public class App {
         } catch (InputMismatchException z){
             System.out.println("Input inválido! Por favor, insira um número.");
         } catch (OutOfTheOptionsException m){
-            System.out.println(m);
+
         }
         return option;
     }
@@ -1105,7 +1100,7 @@ public class App {
         }catch (InputMismatchException z){
             System.out.println("Input inválido! Por favor, insira um número.");
         } catch (OutOfTheOptionsException m){
-            System.out.println(m);
+
         }
     }
 
@@ -1123,7 +1118,7 @@ public class App {
         }catch(InputMismatchException t){
             System.out.println("Input inválido! Por favor, insira um número.");
         }catch (OutOfTheOptionsException n){
-            System.out.println(n);
+
         }
         if(option == 1){
             report.setMedia(true);
@@ -1163,7 +1158,7 @@ public class App {
         }catch (InputMismatchException z){
             System.out.println("Input inválido! Por favor, insira um número.");
         } catch (OutOfTheOptionsException m){
-            System.out.println(m);
+
         }
     }
 
@@ -1226,7 +1221,7 @@ public class App {
         }catch (InputMismatchException z){
             System.out.println("Input inválido! Por favor, insira um número.");
         } catch (OutOfTheOptionsException m){
-            System.out.println(m);
+
         }
 
     }
@@ -1265,7 +1260,7 @@ public class App {
         }catch (InputMismatchException z){
             System.out.println("Input inválido! Por favor, insira um número.");
         } catch (OutOfTheOptionsException m){
-            System.out.println(m);
+
         }
 
     }
@@ -1300,7 +1295,7 @@ public class App {
         }catch (InputMismatchException z){
             System.out.println("Input inválido! Por favor, insira um número.");
         } catch (OutOfTheOptionsException m){
-            System.out.println(m);
+
         }
     }
 

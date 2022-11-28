@@ -1,9 +1,9 @@
-package improve.my.city.Exceptions;
+package improve.my.city.exceptions;
 
 public class CannotFindReportException extends Exception {
 
     public CannotFindReportException() {
-        super("Nenhum relato encontrado!\n");
+        super("\nNenhum relato encontrado!\n");
     }
    
 }

@@ -1,8 +1,8 @@
-package improve.my.city.Reports;
+package improve.my.city.reports;
 
-import improve.my.city.Enums.Districts;
-import improve.my.city.Enums.Institutions;
-import improve.my.city.User.Citizen;
+import improve.my.city.user.Citizen;
+import improve.my.city.enums.Districts;
+import improve.my.city.enums.Institutions;
 
 
 public class Report {

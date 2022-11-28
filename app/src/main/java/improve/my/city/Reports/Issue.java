@@ -1,5 +1,5 @@
-package improve.my.city.Reports;
-import improve.my.city.Enums.*;
+package improve.my.city.reports;
+import improve.my.city.enums.*;
 
 public class Issue {
     private String description;

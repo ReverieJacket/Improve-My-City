@@ -1,9 +1,9 @@
-package improve.my.city.Exceptions;
+package improve.my.city.exceptions;
 
 public class EmptyArrayException extends Exception{
 
     public EmptyArrayException() {
-        super("Não foram encontrados relatos!.\n");
+        super("\nNão foram encontrados relatos!.\n");
     }
     
     

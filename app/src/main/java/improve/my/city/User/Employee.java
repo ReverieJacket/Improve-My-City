@@ -1,6 +1,6 @@
-package improve.my.city.User;
+package improve.my.city.user;
 
-import improve.my.city.Enums.*;
+import improve.my.city.enums.*;
 
 public class Employee extends User {
     private Institutions institution;

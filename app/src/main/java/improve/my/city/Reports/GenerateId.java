@@ -1,4 +1,4 @@
-package improve.my.city.Reports;
+package improve.my.city.reports;
 
 public class GenerateId {
     // Java program generate a random AlphaNumeric String 

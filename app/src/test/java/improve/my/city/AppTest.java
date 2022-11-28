@@ -5,7 +5,7 @@ package improve.my.city;
 
 import org.junit.jupiter.api.Test;
 
-import improve.my.city.Central.App;
+import improve.my.city.central.application.App;
 
 import static org.junit.jupiter.api.Assertions.*;
 

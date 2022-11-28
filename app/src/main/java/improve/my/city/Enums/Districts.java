@@ -1,4 +1,4 @@
-package improve.my.city.Enums;
+package improve.my.city.enums;
 
 public enum Districts {
     Caxangá,

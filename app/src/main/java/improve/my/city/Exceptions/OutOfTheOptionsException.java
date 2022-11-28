@@ -1,4 +1,4 @@
-package improve.my.city.Exceptions;
+package improve.my.city.exceptions;
 
 public class OutOfTheOptionsException extends Exception {
 

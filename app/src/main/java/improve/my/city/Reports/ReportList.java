@@ -1,4 +1,4 @@
-package improve.my.city.Reports;
+package improve.my.city.reports;
 
 import java.util.ArrayList;
 

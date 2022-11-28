@@ -1,4 +1,4 @@
-package improve.my.city.User;
+package improve.my.city.user;
 
 public abstract class User {
     protected String name;

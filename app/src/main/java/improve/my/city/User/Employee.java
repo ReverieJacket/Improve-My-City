@@ -5,12 +5,19 @@ import improve.my.city.Enums.*;
 public class Employee extends User {
     private Institutions institution;
     private String employeeId;
-
+    private static Employee employeeInstance;
     
-    public Employee( String employeeId, String name, int password) {
-        this.name = name;
-        this.password = password;
-        this.employeeId = employeeId;
+    //Implementação de Singleton
+    private Employee() {
+    }
+    public static Employee getInstance(String employeeId, String name, int password){
+        if(employeeInstance == null){
+            employeeInstance = new Employee();
+            employeeInstance.name = name;
+            employeeInstance.password = password;
+            employeeInstance.employeeId = employeeId;
+        }
+        return employeeInstance;
     }
 
 

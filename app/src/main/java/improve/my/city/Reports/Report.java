@@ -3,7 +3,7 @@ package improve.my.city.Reports;
 import improve.my.city.Enums.Districts;
 import improve.my.city.Enums.Institutions;
 import improve.my.city.User.Citizen;
-import improve.my.city.User.User;
+
 
 public class Report {
     private Citizen citizen;
@@ -16,10 +16,19 @@ public class Report {
     private boolean media;
     private int votes;
     private Institutions monitor;
+    private static Report reportInstance;
 
-    public Report() {
-        this.id = GenerateId.getAlphaNumericString(10);
+    //Inplementação de Singleton
+    private Report() {    
     }
+    public static Report getInstance(){
+        if(reportInstance == null){
+            reportInstance = new Report();
+            reportInstance.id = GenerateId.getAlphaNumericString(10);   
+        }
+        return reportInstance;
+    }
+
     @Override
     public String toString(){
         return this.issue.toString() +"\n" +"Localização: " +this.location + "\n" + "Bairro: " +this.district + 

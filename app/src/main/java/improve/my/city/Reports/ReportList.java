@@ -4,27 +4,28 @@ import java.util.ArrayList;
 
 public class ReportList {
     private ArrayList <Report> reports;
+   
+
+
 
     public ReportList() {
         this.reports = new ArrayList<Report>();
     }
-
-
     public void addReport(Report report){
-        this.reports.add(report);
+        reports.add(report);
     }
     public Report getReport (int i){
-        if(i < this.reports.size()){
-            return this.reports.get(i);
+        if(i < reports.size()){
+            return reports.get(i);
         }
         return null;
     }
 
     public Report searchReport (String id){
         int i;
-        for(i = 0; i < this.reports.size(); i++){
-            if(this.reports.get(i).getId().equals(id)){
-                return this.reports.get(i);
+        for(i = 0; i < reports.size(); i++){
+            if(reports.get(i).getId().equals(id)){
+                return reports.get(i);
             }
         }
         return null;
@@ -32,8 +33,8 @@ public class ReportList {
 
     public boolean reportExist(String id){
         int i;
-        for(i = 0; i < this.reports.size(); i++){
-            if(this.reports.get(i).getId()== id){
+        for(i = 0; i < reports.size(); i++){
+            if(reports.get(i).getId()== id){
                 return true;
             }
         }
@@ -46,7 +47,7 @@ public class ReportList {
         return this.getReport(i).toString();
     }
     public int getSize(){
-        return this.reports.size();
+        return reports.size();
     }
 }
 

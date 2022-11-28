@@ -9,15 +9,24 @@ public class Citizen extends User {
     private String address;
     private ArrayList<String> created;
     private ArrayList<String> confirmed;
+    private static Citizen citizenInstance;
     
     
-    public Citizen(String name, int password, String cpf, String address) {
-        this.name = name;
-        this.password = password;
-        this.cpf = cpf;
-        this.address = address;
-        this.created = new ArrayList<String>();
-        this.confirmed = new ArrayList<String>();
+    //Implementação de Singleton
+    private Citizen() {
+    }
+
+    public static Citizen getInstance (String name, int password, String cpf, String address){
+        if(citizenInstance == null){
+        citizenInstance = new Citizen();
+        citizenInstance.name = name;
+        citizenInstance.password = password;
+        citizenInstance.cpf = cpf;
+        citizenInstance.address = address;
+        citizenInstance.created = new ArrayList<String>();
+        citizenInstance.confirmed = new ArrayList<String>();
+        }
+        return citizenInstance;
     }
 
 
